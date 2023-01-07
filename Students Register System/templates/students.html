@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+    <style>
+    h1 {
+    display: flex;
+    justify-content: center;
+    color: blue;
+
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  font-size : 20px;
+  margin: 20px;
+
+}
+th{
+background-color: blue;
+color: white;
+font-size : 30px;
+}
+td, th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+    <h1>Students List</h1>
+    <table>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Mobile Number</th>
+    <th>E-mail</th>
+    <th>Level</th>
+    <th>Address</th>
+    <th>Birthday Date</th>
+
+  </tr>
+        {% for result in results %}
+    <tr>
+        <td>{{ result[0] }}</td>
+        <td>{{ result[1] }}</td>
+        <td>{{ result[2]}}</td>
+        <td>{{ result[3] }}</td>
+        <td>{{ result[4] }}</td>
+        <td>{{ result[5] }}</td>
+        <td>{{ result[6] }}</td>
+
+    </tr>
+    {% endfor %}
+</table>
+
+
+</body>
+</html>
